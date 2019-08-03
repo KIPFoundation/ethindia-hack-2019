@@ -1,0 +1,183 @@
+[{
+        "constant": false,
+        "inputs": [{
+            "name": "_requester",
+            "type": "address"
+        }],
+        "name": "getProposedResults",
+        "outputs": [{
+            "name": "propsoedResults_",
+            "type": "string[]"
+        }],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [],
+        "name": "publishCalculation",
+        "outputs": [{
+                "name": "finalResult_",
+                "type": "string"
+            },
+            {
+                "name": "finalConsistencyCount_",
+                "type": "uint256"
+            },
+            {
+                "name": "totalNodeCount_",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [{
+            "name": "_equation",
+            "type": "string"
+        }],
+        "name": "requestCalculation",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [{
+                "name": "_requester",
+                "type": "address"
+            },
+            {
+                "name": "_result",
+                "type": "string"
+            }
+        ],
+        "name": "submitCalculation",
+        "outputs": [{
+            "name": "_submitStatus",
+            "type": "bool"
+        }],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "anonymous": false,
+        "inputs": [{
+                "indexed": false,
+                "name": "requestingAddress",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "requestedEquation",
+                "type": "string"
+            }
+        ],
+        "name": "SolveThisEquation",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [{
+                "indexed": false,
+                "name": "finalResult_",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "name": "finalConsistencyCount_",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "totalNodeCount_",
+                "type": "uint256"
+            }
+        ],
+        "name": "getResults",
+        "type": "event"
+    },
+    {
+        "constant": true,
+        "inputs": [{
+            "name": "",
+            "type": "string"
+        }],
+        "name": "consistencyScore",
+        "outputs": [{
+            "name": "",
+            "type": "uint256"
+        }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [{
+            "name": "",
+            "type": "address"
+        }],
+        "name": "currentUserEquations",
+        "outputs": [{
+            "name": "",
+            "type": "string"
+        }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [{
+            "name": "",
+            "type": "address"
+        }],
+        "name": "finalResults",
+        "outputs": [{
+            "name": "",
+            "type": "string"
+        }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [{
+            "name": "",
+            "type": "address"
+        }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [{
+                "name": "",
+                "type": "address"
+            },
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "proposedResultsByProviders",
+        "outputs": [{
+            "name": "",
+            "type": "string"
+        }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
