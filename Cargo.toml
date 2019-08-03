@@ -5,3 +5,5 @@ authors = ["0zAND1z <11145839+0zAND1z@users.noreply.github.com>"]
 edition = "2018"
 
 [dependencies]
+meval ="*"
+
