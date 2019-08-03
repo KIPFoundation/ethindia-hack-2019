@@ -12,7 +12,8 @@ contract ComplexCalculation {
     mapping(address => string) public finalResults;
     mapping(string => uint) public consistencyScore;
     
-    
+    event SolveThisEquation(address requestingAddress, string requestedEquation);
+    event getResults(string finalResult_, uint finalConsistencyCount_, uint totalNodeCount_);
     function getProposedResults(address _requester) public returns(string[] memory propsoedResults_) {
         // for (uint z=0; z<proposedResultsByProviders[_requester].length; z++) {
             
@@ -20,7 +21,7 @@ contract ComplexCalculation {
         return proposedResultsByProviders[_requester];
     }
 
-    event SolveThisEquation(address requestingAddress, string requestedEquation);
+    
     
     function requestCalculation(string memory _equation) public {
         
@@ -73,6 +74,7 @@ contract ComplexCalculation {
                 delete providerSubmittedSolution[listOfProviders[d]];
             }
             delete currentUserEquations[msg.sender];
+            emit getResults(finalResults[msg.sender],finalConsistencyCount,nodeCount);
             return (finalResults[msg.sender],finalConsistencyCount,nodeCount);
         }
     }
