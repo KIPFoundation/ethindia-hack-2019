@@ -6,4 +6,5 @@ edition = "2018"
 
 [dependencies]
 meval ="*"
-
+web3 = { git = "https://github.com/tomusdrw/rust-web3" }
+rpassword = "3.0.2"
